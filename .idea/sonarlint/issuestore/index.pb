@@ -19,3 +19,7 @@ x
 Happ/src/main/java/de/maleckandfriends/tictacyasinemely/GameActivity.java,b\a\ba0c3b1db1e572450755d318abf8ab0884d25e8d
 x
 Happ/src/main/java/de/maleckandfriends/tictacyasinemely/MainActivity.java,0\3\036635a93c4bad9a0bf49c3ba75ee36806e12db1
+}
+Mapp/src/main/java/de/maleckandfriends/tictacyasinemely/PlayerListAdapter.java,3\2\328d360c59b775d3df719b4b5e39379873439c25
+r
+Bapp/src/main/java/de/maleckandfriends/tictacyasinemely/Player.java,1\c\1c5e6ec76487e184a139b92ca12dbe30ec47c35d
