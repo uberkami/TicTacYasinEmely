@@ -1,17 +1,14 @@
-package com.example.tictacyasinemely;
+package de.maleckandfriends.tictacyasinemely;
 
-        import android.graphics.Bitmap;
-        import android.graphics.BitmapFactory;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.ImageView;
-        import android.widget.TextView;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-        import androidx.appcompat.app.AppCompatActivity;
-        import androidx.gridlayout.widget.GridLayout;
-
-        import java.io.FileInputStream;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.gridlayout.widget.GridLayout;
 
 
 public class GameActivity extends AppCompatActivity {
@@ -23,8 +20,10 @@ public class GameActivity extends AppCompatActivity {
     int notPlayedField;
     String name1 = "";
     String name2 = "";
-    Bitmap image1 = null;
-    Bitmap image2 = null;
+    //Bitmap image1 = null;
+    //Bitmap image2 = null;
+    Uri imageUri1;
+    Uri imageUri2;
     Button playAgainButton;
     TextView winnerTextView;
 //Bitmap bm = findViewById(R.id.imagePlayer1).get
@@ -52,11 +51,14 @@ public class GameActivity extends AppCompatActivity {
         }
 
 
-        String filename1 = getIntent().getStringExtra("image1");
+        imageUri1 = Uri.parse(getIntent().getStringExtra("image1"));
+        imageUri2 = Uri.parse(getIntent().getStringExtra("image2"));
+        /*
         try {
-            FileInputStream is = this.openFileInput(filename1);
-            image1 = BitmapFactory.decodeStream(is);
-            is.close();
+
+
+            image1 = BitmapFactory.decodeFile(getIntent().getStringExtra("image1"));
+
             //imagePlayer.setImageBitmap(image1);
 
         } catch (Exception e) {
@@ -65,15 +67,12 @@ public class GameActivity extends AppCompatActivity {
 
         String filename2 = getIntent().getStringExtra("image2");
         try {
-            FileInputStream is = this.openFileInput(filename2);
-            image2 = BitmapFactory.decodeStream(is);
-            is.close();
-            //imagePlayer.setImageBitmap(image2);
+            image2 = BitmapFactory.decodeFile(getIntent().getStringExtra("image2"));
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        imagePlayer.setImageBitmap(image1);
+*/
+        imagePlayer.setImageURI(imageUri1);
         winnerTextView.setText(name1 + " play!");
     }
 
@@ -88,17 +87,19 @@ public class GameActivity extends AppCompatActivity {
 
             image.setTranslationY(-1500);
             if (playersTurn == 0) {
-
-                image.setImageBitmap(image1);
+                image.setImageURI(imageUri1);
+                //image.setImageBitmap(image1);
                 playersTurn = 1;
-                imagePlayer.setImageBitmap(image2);
-                winnerTextView.setText(name2+" play!");
+                imagePlayer.setImageURI(imageUri2);
+                //imagePlayer.setImageBitmap(image2);
+                winnerTextView.setText(name2 + " play!");
             } else {
-
-                image.setImageBitmap(image2);
+                image.setImageURI(imageUri2);
+                //image.setImageBitmap(image2);
                 playersTurn = 0;
-                imagePlayer.setImageBitmap(image1);
-                winnerTextView.setText(name1+" play!");
+                imagePlayer.setImageURI(imageUri1);
+                //imagePlayer.setImageBitmap(image1);
+                winnerTextView.setText(name1 + " play!");
             }
             image.animate().translationY(00).rotation(360).setDuration(00);
             if (!checkWinner()) {
@@ -140,11 +141,13 @@ public class GameActivity extends AppCompatActivity {
                 String winner = "";
                 if (playersTurn == 1) {
                     winner = name1;
-                    imagePlayer.setImageBitmap(image1);
+                    //imagePlayer.setImageBitmap(image1);
+                    imagePlayer.setImageURI(imageUri1);
 
                 } else if (playersTurn == 0) {
                     winner = name2;
-                    imagePlayer.setImageBitmap(image2);
+                    //imagePlayer.setImageBitmap(image2);
+                    imagePlayer.setImageURI(imageUri2);
 
                 }
                 winnerTextView.setText(winner + " WON!");
@@ -177,12 +180,14 @@ public class GameActivity extends AppCompatActivity {
 
         if (playersTurn == 0) {
             playersTurn = 1;
-            imagePlayer.setImageBitmap(image2);
-            winnerTextView.setText(name2+" play!");
+            //imagePlayer.setImageBitmap(image2);
+            imagePlayer.setImageURI(imageUri2);
+            winnerTextView.setText(name2 + " play!");
         } else if (playersTurn == 1) {
             playersTurn = 0;
-            imagePlayer.setImageBitmap(image1);
-            winnerTextView.setText(name1+" play!");
+            //imagePlayer.setImageBitmap(image1);
+            imagePlayer.setImageURI(imageUri1);
+            winnerTextView.setText(name1 + " play!");
         }
 
 

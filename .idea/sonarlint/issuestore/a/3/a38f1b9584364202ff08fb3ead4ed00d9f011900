@@ -1,28 +1,0 @@
-
-Fsquid:S1148a"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½œ”½-
-osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(â¨óÕşÿÿÿÿ8««€¿-
-nsquid:CommentedOutCodeLinef"<This block of commented-out lines of code should be removed.(®–Ã™ùÿÿÿÿ8Ï¿½-
-jsquid:CommentedOutCodeLine½"<This block of commented-out lines of code should be removed.(•¢Âˆ8£÷ê«¾-
-nsquid:CommentedOutCodeLineI"<This block of commented-out lines of code should be removed.(ÅŒ¾úÿÿÿÿ8Ï¿½-
-Fsquid:S1148k"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ï¿½-
-Nsquid:S1066¢"/Merge this if statement with the enclosing one.(©§¹8»æø™½-
-nsquid:CommentedOutCodeLiney"<This block of commented-out lines of code should be removed.(˜ìıúÿÿÿÿ8÷‹„€¿-
-nsquid:CommentedOutCodeLine}"<This block of commented-out lines of code should be removed.(ØáŞ¯şÿÿÿÿ8…¢„€¿-
-Isquid:S00108¢")Either remove or fill this block of code.(©§¹8»æø™½-
-isquid:CommentedOutCodeLineA"<This block of commented-out lines of code should be removed.(œŠ‹í8Ï¿½-
-osquid:CommentedOutCodeLine¯"<This block of commented-out lines of code should be removed.(—³¹¡ÿÿÿÿÿ8»æø™½-
-}squid:S1149$"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(çé§8×¯ßõ¼-
-isquid:CommentedOutCodeLineo"<This block of commented-out lines of code should be removed.(¢ğÑ¯8»ß€è¾-
-isquid:CommentedOutCodeLine""<This block of commented-out lines of code should be removed.(Íã¶8ÃÆ…ì¼-
-osquid:CommentedOutCodeLineŒ"<This block of commented-out lines of code should be removed.(ñıÿüÿÿÿÿ8»æø™½-
-isquid:CommentedOutCodeLine^"<This block of commented-out lines of code should be removed.(ƒ£ü8½œ”½-
-osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(€Òı¿øÿÿÿÿ8˜ÑæÔÂ-
-isquid:CommentedOutCodeLine;"<This block of commented-out lines of code should be removed.(ù€‘ü8Ï¿½-
-Gsquid:S1148™"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8»æø™½-
-jsquid:CommentedOutCodeLine•"<This block of commented-out lines of code should be removed.(ÿ²•è8»æø™½-
-nsquid:CommentedOutCodeLine>"<This block of commented-out lines of code should be removed.(à¯¤†ûÿÿÿÿ8Ï¿½-
-Psquid:S1481T"-Remove this unused "filename" local variable.(¿ˆá¢ùÿÿÿÿ8Ï¿½-
-_squid:S1854T"<Remove this useless assignment to local variable "filename".(¿ˆá¢ùÿÿÿÿ8Ï¿½-
-Usquid:S2589d"7Remove this expression which always evaluates to "true"(ãõü½8İş“íÂ-
-Usquid:S2589Z"7Remove this expression which always evaluates to "true"(ûè®Ş8İş“íÂ-
-ksquid:UselessImportCheck";Remove this unused import 'android.graphics.BitmapFactory'.(âàºÍûÿÿÿÿ8İş“íÂ-
