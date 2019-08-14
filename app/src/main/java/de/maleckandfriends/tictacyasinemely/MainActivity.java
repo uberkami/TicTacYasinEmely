@@ -151,8 +151,12 @@ public class MainActivity extends AppCompatActivity {
         bundle.putString("name2", player2Name.getText().toString());
 
         game.putExtras(bundle);
-        game.putExtra("image1", uriPlayer1.toString());
-        game.putExtra("image2", uriPlayer2.toString());
+        if (uriPlayer1 != null) {
+            game.putExtra("image1", uriPlayer1.toString());
+        }
+        if(uriPlayer2 != null) {
+            game.putExtra("image2", uriPlayer2.toString());
+        }
         //game.putExtra(name1, player1Name.getText());
         //game.putExtra(name2, player2Name.getText());
       //  playerList.

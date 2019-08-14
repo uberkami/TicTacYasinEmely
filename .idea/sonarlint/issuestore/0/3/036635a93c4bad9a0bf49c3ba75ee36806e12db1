@@ -1,50 +1,51 @@
 
-Vsquid:UnusedPrivateMethodl",Remove this unused private "saveMap" method.(¾²æ²ÿÿÿÿÿ
-csquid:S1192r"GDefine a constant instead of duplicating this literal "My_map" 3 times.(ÇÅøúÿÿÿÿ
-Lsquid:S1066ç"/Merge this if statement with the enclosing one.(’âÎ“ıÿÿÿÿ
-psquid:S2293]"YReplace the type specification in this constructor call with the diamond operator ("<>").(×ĞÄû
-psquid:S2293y"YReplace the type specification in this constructor call with the diamond operator ("<>").(ŠÛÉ›
-bsquid:CommentedOutCodeLine="<This block of commented-out lines of code should be removed.(Íã¶
-bsquid:CommentedOutCodeLineF"<This block of commented-out lines of code should be removed.(ü£¢Ğ
-gsquid:CommentedOutCodeLinea"<This block of commented-out lines of code should be removed.( ã€èùÿÿÿÿ
-csquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ù€‘ü
-hsquid:CommentedOutCodeLine‘"<This block of commented-out lines of code should be removed.(à¯¤†ûÿÿÿÿ
-csquid:CommentedOutCodeLine”"<This block of commented-out lines of code should be removed.(œŠ‹í
-hsquid:CommentedOutCodeLineœ"<This block of commented-out lines of code should be removed.(ÅŒ¾úÿÿÿÿ
-bsquid:CommentedOutCodeLineª"<This block of commented-out lines of code should be removed.(Ç×ß8
 hsquid:CommentedOutCodeLine³"<This block of commented-out lines of code should be removed.(Ù¨…‰ùÿÿÿÿ
-hsquid:CommentedOutCodeLine¾"<This block of commented-out lines of code should be removed.(©÷¥Ûıÿÿÿÿ
-hsquid:CommentedOutCodeLineÁ"<This block of commented-out lines of code should be removed.( ğµ–ıÿÿÿÿ
-hsquid:CommentedOutCodeLineÄ"<This block of commented-out lines of code should be removed.(²›—­ıÿÿÿÿ
-hsquid:CommentedOutCodeLineÇ"<This block of commented-out lines of code should be removed.(‘ç¿øÿÿÿÿ
-csquid:CommentedOutCodeLineÔ"<This block of commented-out lines of code should be removed.(¦Üè
-csquid:CommentedOutCodeLineÛ"<This block of commented-out lines of code should be removed.(ü¾¾ï
-hsquid:CommentedOutCodeLineë"<This block of commented-out lines of code should be removed.(¦Şßıÿÿÿÿ
-hsquid:CommentedOutCodeLineõ"<This block of commented-out lines of code should be removed.(ĞÄ…÷úÿÿÿÿ
-bsquid:CommentedOutCodeLineı"<This block of commented-out lines of code should be removed.(¸éî1
-csquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(’Äƒ
-csquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ç’×Ÿ
-hsquid:CommentedOutCodeLineÆ"<This block of commented-out lines of code should be removed.(€Òı¿øÿÿÿÿ
-csquid:CommentedOutCodeLineĞ"<This block of commented-out lines of code should be removed.(íñë’
-csquid:CommentedOutCodeLineî"<This block of commented-out lines of code should be removed.(íÒ™¶
-bsquid:CommentedOutCodeLineƒ"<This block of commented-out lines of code should be removed.(–äÚg
-}squid:S1488æ"`Immediately return this expression instead of assigning it to the temporary variable "FileName".(¿°ß¤ÿÿÿÿÿ
-?squid:S1481e"(Remove this unused "key" local variable.(”µ‰†
-Asquid:S1481f"*Remove this unused "value" local variable.(—¾Şô
-Gsquid:S1481Ğ"*Remove this unused "error" local variable.(Èÿ‚ûúÿÿÿÿ
-isquid:S3776£"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¹Î¾
-Psquid:S1854f"9Remove this useless assignment to local variable "value".(—¾Şô
-Nsquid:S1854e"7Remove this useless assignment to local variable "key".(”µ‰†
-Vsquid:S1854Ğ"9Remove this useless assignment to local variable "error".(Èÿ‚ûúÿÿÿÿ
-jsquid:S00117Ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê§´
-osquid:S00117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿°ß¤ÿÿÿÿÿ
-Xsquid:UselessImportCheck"4Remove this unused import 'android.widget.ListView'.(Œ‰Ö×
-@squid:S1148‡"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-@squid:S1148¸"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+csquid:CommentedOutCodeLineÑ"<This block of commented-out lines of code should be removed.(íñë’
 @squid:S1148Ë"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-@squid:S1148Ş"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-@squid:S1148‹"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-@squid:S1148“"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
 vsquid:S1149?"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(çé§
+Lsquid:S1066è"/Merge this if statement with the enclosing one.(’âÎ“ıÿÿÿÿ
+gsquid:CommentedOutCodeLinea"<This block of commented-out lines of code should be removed.( ã€èùÿÿÿÿ
+?squid:S1481e"(Remove this unused "key" local variable.(”µ‰†
+bsquid:CommentedOutCodeLineş"<This block of commented-out lines of code should be removed.(¸éî1
+csquid:CommentedOutCodeLine”"<This block of commented-out lines of code should be removed.(œŠ‹í
+Vsquid:UnusedPrivateMethodl",Remove this unused private "saveMap" method.(¾²æ²ÿÿÿÿÿ
+bsquid:CommentedOutCodeLineF"<This block of commented-out lines of code should be removed.(ü£¢Ğ
+hsquid:CommentedOutCodeLine‘"<This block of commented-out lines of code should be removed.(à¯¤†ûÿÿÿÿ
+osquid:CommentedOutCodeLineù"<This block of commented-out lines of code should be removed.(—ğûÔüÿÿÿÿ8ö“•É-
+@squid:S1148”"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+hsquid:CommentedOutCodeLineœ"<This block of commented-out lines of code should be removed.(ÅŒ¾úÿÿÿÿ
+bsquid:CommentedOutCodeLine="<This block of commented-out lines of code should be removed.(Íã¶
+hsquid:CommentedOutCodeLine¾"<This block of commented-out lines of code should be removed.(©÷¥Ûıÿÿÿÿ
 Y
 squid:S899÷"BDo something with the "boolean" value returned by "createNewFile".(¾ïı
+bsquid:CommentedOutCodeLine„"<This block of commented-out lines of code should be removed.(–äÚg
+hsquid:CommentedOutCodeLineë"<This block of commented-out lines of code should be removed.(¦Şßıÿÿÿÿ
+psquid:S2293]"YReplace the type specification in this constructor call with the diamond operator ("<>").(×ĞÄû
+Vsquid:S1854Ğ"9Remove this useless assignment to local variable "error".(Èÿ‚ûúÿÿÿÿ
+csquid:CommentedOutCodeLineÛ"<This block of commented-out lines of code should be removed.(ü¾¾ï
+Asquid:S1481f"*Remove this unused "value" local variable.(—¾Şô
+osquid:S00117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿°ß¤ÿÿÿÿÿ
+@squid:S1148Œ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+psquid:S2293y"YReplace the type specification in this constructor call with the diamond operator ("<>").(ŠÛÉ›
+jsquid:S00117Ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê§´
+@squid:S1148¸"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+hsquid:CommentedOutCodeLineõ"<This block of commented-out lines of code should be removed.(ĞÄ…÷úÿÿÿÿ
+hsquid:CommentedOutCodeLineÇ"<This block of commented-out lines of code should be removed.(‘ç¿øÿÿÿÿ
+@squid:S1148Ş"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+hsquid:CommentedOutCodeLineÁ"<This block of commented-out lines of code should be removed.( ğµ–ıÿÿÿÿ
+csquid:CommentedOutCodeLineÔ"<This block of commented-out lines of code should be removed.(¦Üè
+Gsquid:S1481Ğ"*Remove this unused "error" local variable.(Èÿ‚ûúÿÿÿÿ
+hsquid:CommentedOutCodeLineÇ"<This block of commented-out lines of code should be removed.(€Òı¿øÿÿÿÿ
+isquid:S3776£"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¹Î¾
+csquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ç’×Ÿ
+csquid:CommentedOutCodeLine‚"<This block of commented-out lines of code should be removed.(’Äƒ
+Nsquid:S1854e"7Remove this useless assignment to local variable "key".(”µ‰†
+bsquid:CommentedOutCodeLineª"<This block of commented-out lines of code should be removed.(Ç×ß8
+csquid:CommentedOutCodeLineï"<This block of commented-out lines of code should be removed.(íÒ™¶
+hsquid:CommentedOutCodeLineÄ"<This block of commented-out lines of code should be removed.(²›—­ıÿÿÿÿ
+Xsquid:UselessImportCheck"4Remove this unused import 'android.widget.ListView'.(Œ‰Ö×
+csquid:S1192r"GDefine a constant instead of duplicating this literal "My_map" 3 times.(ÇÅøúÿÿÿÿ
+Psquid:S1854f"9Remove this useless assignment to local variable "value".(—¾Şô
+}squid:S1488æ"`Immediately return this expression instead of assigning it to the temporary variable "FileName".(¿°ß¤ÿÿÿÿÿ
+@squid:S1148‡"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+csquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ù€‘ü

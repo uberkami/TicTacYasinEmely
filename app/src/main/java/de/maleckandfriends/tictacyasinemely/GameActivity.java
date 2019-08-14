@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.gridlayout.widget.GridLayout;
 
+import java.io.InputStream;
+
 
 public class GameActivity extends AppCompatActivity {
     ImageView imagePlayer;
@@ -50,9 +52,20 @@ public class GameActivity extends AppCompatActivity {
             name2 = "Player 2";
         }
 
+        if (getIntent().getStringExtra("image1") != null) {
+            imageUri1 = Uri.parse(getIntent().getStringExtra("image1"));
+        } else {
+            imageUri1 = Uri.parse("android.resource://de.maleckandfriends.tictacyasinemely/drawable/player1");
+            //InputStream stream = getContentResolver().openInputStream(uri);
 
-        imageUri1 = Uri.parse(getIntent().getStringExtra("image1"));
-        imageUri2 = Uri.parse(getIntent().getStringExtra("image2"));
+        }
+        if (getIntent().getStringExtra("image2") != null) {
+            imageUri2 = Uri.parse(getIntent().getStringExtra("image2"));
+        } else {
+            imageUri2 = Uri.parse("android.resource://de.maleckandfriends.tictacyasinemely/drawable/player2");
+            //InputStream stream = getContentResolver().openInputStream(uri);
+
+        }
         /*
         try {
 
