@@ -1,38 +1,0 @@
-
-jsquid:CommentedOutCodeLineí"<This block of commented-out lines of code should be removed.(íñë’8´ÝäÌÅ-
-jsquid:CommentedOutCodeLineŠ"<This block of commented-out lines of code should be removed.(íÒ™¶8´ÝäÌÅ-
-isquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(Íã¶8´ÝäÌÅ-
-osquid:CommentedOutCodeLineˆ"<This block of commented-out lines of code should be removed.( ðµ–ýÿÿÿÿ8´ÝäÌÅ-
-isquid:CommentedOutCodeLine²"<This block of commented-out lines of code should be removed.(¸éî18´ÝäÌÅ-
-isquid:CommentedOutCodeLineŸ"<This block of commented-out lines of code should be removed.(–äÚg8´ÝäÌÅ-
-}squid:S11496"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(çé§8´ÝäÌÅ-
-osquid:CommentedOutCodeLine«"<This block of commented-out lines of code should be removed.(ñ¶ó†üÿÿÿÿ8´ÝäÌÅ-
-osquid:CommentedOutCodeLineŽ"<This block of commented-out lines of code should be removed.(‘ç¿øÿÿÿÿ8´ÝäÌÅ-
-„squid:S1488›"`Immediately return this expression instead of assigning it to the temporary variable "FileName".(¿°ß¤ÿÿÿÿÿ8´ÝäÌÅ-
-osquid:CommentedOutCodeLineä"<This block of commented-out lines of code should be removed.(€Òý¿øÿÿÿÿ8´ÝäÌÅ-
-\squid:S1854|"9Remove this useless assignment to local variable "error".(Èÿ‚ûúÿÿÿÿ8´ÝäÌÅ-
-Gsquid:S1148Á"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8´ÝäÌÅ-
-osquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(¦ÞßŽýÿÿÿÿ8´ÝäÌÅ-
-Msquid:S1481|"*Remove this unused "error" local variable.(Èÿ‚ûúÿÿÿÿ8´ÝäÌÅ-
-isquid:CommentedOutCodeLineR"<This block of commented-out lines of code should be removed.(ù€‘ü8´ÝäÌÅ-
-isquid:CommentedOutCodeLine="<This block of commented-out lines of code should be removed.(ü£¢Ð8´ÝäÌÅ-
-Hsquid:S1481m"+Remove this unused "bitmap" local variable.(ÒÍ°l8´ÝäÌÅ-
-Gsquid:S1148¹"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8´ÝäÌÅ-
-Psquid:S1481k"-Remove this unused "filename" local variable.(¿ˆá¢ùÿÿÿÿ8´ÝäÌÅ-
-isquid:CommentedOutCodeLineX"<This block of commented-out lines of code should be removed.(œŠ‹í8´ÝäÌÅ-
-nsquid:CommentedOutCodeLine`"<This block of commented-out lines of code should be removed.(ÅŒ¾úÿÿÿÿ8´ÝäÌÅ-
-Ssquid:S1066„"/Merge this if statement with the enclosing one.(’âÎ“ýÿÿÿÿ8´ÝäÌÅ-
-Fsquid:S1148y"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8´ÝäÌÅ-
-squid:UselessImportCheck)"TRemove this unnecessary import: same package classes are always implicitly imported.(›·Üì8ÆèÌÅ-
-ƒsquid:S1488•"_Immediately return this expression instead of assigning it to the temporary variable "FileUri".(àèÃùÿÿÿÿ8´ÝäÌÅ-
-`
-squid:S899¬"BDo something with the "boolean" value returned by "createNewFile".(¾žïý8´ÝäÌÅ-
-vsquid:S00117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿°ß¤ÿÿÿÿÿ8´ÝäÌÅ-
-jsquid:CommentedOutCodeLine€"<This block of commented-out lines of code should be removed.(¦Üè8´ÝäÌÅ-
-jsquid:CommentedOutCodeLine½"<This block of commented-out lines of code should be removed.(Ç’×Ÿ8´ÝäÌÅ-
-nsquid:CommentedOutCodeLineU"<This block of commented-out lines of code should be removed.(à¯¤†ûÿÿÿÿ8´ÝäÌÅ-
-vsquid:S00117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àèÃùÿÿÿÿ8´ÝäÌÅ-
-nsquid:CommentedOutCodeLinet"<This block of commented-out lines of code should be removed.(Ù¨…‰ùÿÿÿÿ8´ÝäÌÅ-
-_squid:S1854k"<Remove this useless assignment to local variable "filename".(¿ˆá¢ùÿÿÿÿ8´ÝäÌÅ-
-squid:UselessImportCheck("TRemove this unnecessary import: same package classes are always implicitly imported.(Á„Þ­8ÆèÌÅ-
-nsquid:CommentedOutCodeLinel"<This block of commented-out lines of code should be removed.(åä®Øúÿÿÿÿ8êëïÌÅ-

@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         player1Name = findViewById(R.id.Player1Text);
         player2Name = findViewById(R.id.Player2Text);
         startButton = findViewById(R.id.startButton);
-
+        //ListView listView = (ListView) findViewById(R.id.listView);
         Map<String, String> playerList;
         //Laden der HashMap
         try {
@@ -94,9 +94,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (!playerList.isEmpty()) {
-          //  PlayerListAdapter adapter = new PlayerListAdapter(this, R.layout.player_list_layout, playerList);
+            //  PlayerListAdapter adapter = new PlayerListAdapter(this, R.layout.player_list_layout, playerList);
 //listView.setAdapter(adapter);
-          //  ArrayAdapter arrayAdapter = new
+            //  ArrayAdapter arrayAdapter = new
             for (Map.Entry<String, String> entry : playerList.entrySet()) {
                 String key = entry.getKey();
                 Object value = entry.getValue();
@@ -155,16 +155,16 @@ public class MainActivity extends AppCompatActivity {
         game.putExtra("image2", uriPlayer2.toString());
         //game.putExtra(name1, player1Name.getText());
         //game.putExtra(name2, player2Name.getText());
-      //  playerList.
-                startActivity(game);
+        //  playerList.
+        startActivity(game);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        //String filename = "Player_";
+        String filename = "Player_";
         //Uri selectedImage = data.getData();
-        //Bitmap bitmap = null;
+        Bitmap bitmap = null;
         Bitmap croppedBitmap = null;
         Uri resultUri = null;
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
@@ -178,22 +178,6 @@ public class MainActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
-                Bitmap circularBitmap = getCircularBitmap(croppedBitmap);
-
-                if (picToPlayer == 1) {
-                    //uriPlayer1 = resultUri;
-                    imageView1.setImageBitmap(circularBitmap);
-                    saveImage(circularBitmap, 1);
-                    //bitmapCreator(bitmap, filename1);
-                    //imageView1.setImageDrawable(drawable);
-                } else if (picToPlayer == 2) {
-                    //uriPlayer2 = resultUri;
-                    imageView2.setImageBitmap(circularBitmap);
-                    saveImage(circularBitmap, 2);
-                    //bitmapCreator(bitmap, filename2);
-                    // imageView2.setImageDrawable(drawable);
-                }
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Exception error = result.getError();
             }
@@ -201,6 +185,21 @@ public class MainActivity extends AppCompatActivity {
 
         //saveImage(bitmap);
 
+        Bitmap circularBitmap = getCircularBitmap(croppedBitmap);
+
+        if (picToPlayer == 1) {
+            //uriPlayer1 = resultUri;
+            imageView1.setImageBitmap(circularBitmap);
+            saveImage(circularBitmap, 1);
+            //bitmapCreator(bitmap, filename1);
+            //imageView1.setImageDrawable(drawable);
+        } else if (picToPlayer == 2) {
+            //uriPlayer2 = resultUri;
+            imageView2.setImageBitmap(circularBitmap);
+            saveImage(circularBitmap, 2);
+            //bitmapCreator(bitmap, filename2);
+            // imageView2.setImageDrawable(drawable);
+        }
     }
 
     public Uri getUri(File file) {
@@ -236,8 +235,9 @@ public class MainActivity extends AppCompatActivity {
             // FileOutputStream out = new FileOutputStream(path + "/" + imageName+".jpg");
             saveImage.createNewFile();
             FileOutputStream out = new FileOutputStream(saveImage);
-Bitmap resizedBitmap = getResizedBitmap(imageFile, 200, 200);
-            resizedBitmap.compress(Bitmap.CompressFormat.PNG, 100, out); // bmp is your Bitmap instance
+//Bitmap resizedBitmap = getResizedBitmap(imageFile, 200, 200);
+            //          resizedBitmap.compress(Bitmap.CompressFormat.PNG, 100, out); // bmp is your Bitmap instance
+            imageFile.compress(Bitmap.CompressFormat.PNG, 100, out); // bmp is your Bitmap instance
             // PNG is a lossless format, the compression factor (100) is ignored
 
             //OutputStreamWriter outWriter = new OutputStreamWriter(out);
@@ -265,6 +265,7 @@ Bitmap resizedBitmap = getResizedBitmap(imageFile, 200, 200);
             e.printStackTrace();
         }
     }
+
     public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
         int width = bm.getWidth();
         int height = bm.getHeight();
@@ -281,6 +282,7 @@ Bitmap resizedBitmap = getResizedBitmap(imageFile, 200, 200);
         bm.recycle();
         return resizedBitmap;
     }
+
     private void scanFile(String path) {
         MediaScannerConnection.scanFile(MainActivity.this,
                 new String[]{path}, null,
