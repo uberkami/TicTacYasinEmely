@@ -161,6 +161,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        Log.i("requestCode", Integer.toString(requestCode));
+        Log.i("resultCode", Integer.toString(resultCode));
+        if (data != null) {
+            Log.i("Intent", "Intent is not empty");
+        }
         super.onActivityResult(requestCode, resultCode, data);
         //String filename = "Player_";
         //Uri selectedImage = data.getData();
@@ -180,20 +185,25 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 Bitmap circularBitmap = getCircularBitmap(croppedBitmap);
+try {
+    if (picToPlayer == 1) {
+        //uriPlayer1 = resultUri;
+        imageView1.setImageBitmap(circularBitmap);
+        saveImage(circularBitmap, 1);
+        //bitmapCreator(bitmap, filename1);
+        //imageView1.setImageDrawable(drawable);
+    } else if (picToPlayer == 2) {
+        //uriPlayer2 = resultUri;
+        imageView2.setImageBitmap(circularBitmap);
+        saveImage(circularBitmap, 2);
+        //bitmapCreator(bitmap, filename2);
+        // imageView2.setImageDrawable(drawable);
+    }
+} catch (Exception e) {
+    e.printStackTrace();
+    Log.i("Error saving Image", "Error in onActivityResult");
+}
 
-                if (picToPlayer == 1) {
-                    //uriPlayer1 = resultUri;
-                    imageView1.setImageBitmap(circularBitmap);
-                    saveImage(circularBitmap, 1);
-                    //bitmapCreator(bitmap, filename1);
-                    //imageView1.setImageDrawable(drawable);
-                } else if (picToPlayer == 2) {
-                    //uriPlayer2 = resultUri;
-                    imageView2.setImageBitmap(circularBitmap);
-                    saveImage(circularBitmap, 2);
-                    //bitmapCreator(bitmap, filename2);
-                    // imageView2.setImageDrawable(drawable);
-                }
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Exception error = result.getError();
             }
@@ -221,7 +231,7 @@ public class MainActivity extends AppCompatActivity {
         return FileName;
     }
 
-    public void saveImage(Bitmap imageFile, int playerNumber) {
+    public void saveImage(Bitmap imageFile, int playerNumber)  {
         //if (imageName == null) {
         //    imageName = createImageName();
         //}
@@ -236,8 +246,9 @@ public class MainActivity extends AppCompatActivity {
             // FileOutputStream out = new FileOutputStream(path + "/" + imageName+".jpg");
             saveImage.createNewFile();
             FileOutputStream out = new FileOutputStream(saveImage);
-Bitmap resizedBitmap = getResizedBitmap(imageFile, 200, 200);
-            resizedBitmap.compress(Bitmap.CompressFormat.PNG, 100, out); // bmp is your Bitmap instance
+//Bitmap resizedBitmap = getResizedBitmap(imageFile, 200, 200);
+            //resizedBitmap.compress(Bitmap.CompressFormat.PNG, 100, out); // bmp is your Bitmap instance
+            imageFile.compress(Bitmap.CompressFormat.PNG, 100, out); // bmp is your Bitmap instance
             // PNG is a lossless format, the compression factor (100) is ignored
 
             //OutputStreamWriter outWriter = new OutputStreamWriter(out);
