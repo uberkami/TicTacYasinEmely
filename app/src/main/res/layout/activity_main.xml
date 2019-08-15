@@ -123,6 +123,24 @@
         app:layout_constraintStart_toEndOf="@+id/Player2Text"
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
+    <Button
+        android:id="@+id/choosePlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="choosePlayer"
+        android:tag="1"
+        android:text="choose Player 1"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cameraButton2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

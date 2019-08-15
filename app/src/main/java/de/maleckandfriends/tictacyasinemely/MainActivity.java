@@ -45,22 +45,22 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 
 public class MainActivity extends AppCompatActivity {
-
-
     TextView player1Name;
     TextView player2Name;
     int picToPlayer;
     Button startButton;
     String playerID = "Player_";
-    //static String name1;
-//static String name2;
+    String name1;
+    String name2;
     StringBuffer sb = new StringBuffer(playerID);
     String filename1 = "pictureOfPlayer1.png";
     String filename2 = "pictureOfPlayer2.png";
@@ -70,8 +70,9 @@ public class MainActivity extends AppCompatActivity {
     public static final int SAVING_IMAGE_REQUEST = 2;
 //public static final int CAPTURE_IMAGE_REQUEST = 3;
 
-    Uri uriPlayer1;
-    Uri uriPlayer2;
+    Uri uriPlayer1 = null;
+    Uri uriPlayer2 = null;
+    Map<String, String> playerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         player2Name = findViewById(R.id.Player2Text);
         startButton = findViewById(R.id.startButton);
 
-        Map<String, String> playerList;
+
         //Laden der HashMap
         try {
             playerList = loadSavedPlayerList();
@@ -94,16 +95,14 @@ public class MainActivity extends AppCompatActivity {
             playerList = new HashMap<String, String>();
         }
 
-        if (!playerList.isEmpty()) {
-          //  PlayerListAdapter adapter = new PlayerListAdapter(this, R.layout.player_list_layout, playerList);
-//listView.setAdapter(adapter);
-          //  ArrayAdapter arrayAdapter = new
-            for (Map.Entry<String, String> entry : playerList.entrySet()) {
-                String key = entry.getKey();
-                Object value = entry.getValue();
 
-            }
-        }
+    }
+
+    public void choosePlayer(View view) {
+        int selectedPlayer = Integer.parseInt(view.getTag().toString());
+        Log.i("tag of view", "" + selectedPlayer);
+        Intent choosePlayerIntent = new Intent(this, choosePlayer.class);
+        startActivityForResult(choosePlayerIntent, 5);
     }
 
     @Override
@@ -118,8 +117,8 @@ public class MainActivity extends AppCompatActivity {
         Log.i("App closed by", "onDestroy");
     }
 
-    private void saveMap(Map<String, Boolean> inputMap) {
-        SharedPreferences pSharedPref = getApplicationContext().getSharedPreferences("MyVariables", Context.MODE_PRIVATE);
+    private void saveMap(Map<String, String> inputMap) {
+        SharedPreferences pSharedPref = getApplicationContext().getSharedPreferences("savedPlayerList", Context.MODE_PRIVATE);
         if (pSharedPref != null) {
             JSONObject jsonObject = new JSONObject(inputMap);
             String jsonString = jsonObject.toString();
@@ -150,30 +149,39 @@ public class MainActivity extends AppCompatActivity {
         return outputMap;
     }
 
+    public void savePlayerInMap(String name, String uri) {
+        if (playerList == null) {
+            playerList = new HashMap<String, String>();
+        }
+        if (name != null && uri != null) {
+            Log.i("name zu speichern", name);
+            playerList.put(name, uri);
+        }
+    }
+
     public void startGame(View view) {
         final Intent game = new Intent(this, GameActivity.class);
-        //name1 = player1Name.getText().toString();
-        //name2 = player2Name.getText().toString();
+        name1 = player1Name.getText().toString();
+        name2 = player2Name.getText().toString();
 
-        //startActivity(new Intent(MainActivity.this, GameActivity.class));
-        //startService(game);
-
-        //Intent game = new Intent (MainActivity.this, GameActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putString("name1", player1Name.getText().toString());
-        bundle.putString("name2", player2Name.getText().toString());
+        bundle.putString("name1", name1);
+        bundle.putString("name2", name2);
+
 
         game.putExtras(bundle);
         if (uriPlayer1 != null) {
             game.putExtra("image1", uriPlayer1.toString());
+            savePlayerInMap(name1, uriPlayer1.toString());
         }
-        if(uriPlayer2 != null) {
+        if (uriPlayer2 != null) {
             game.putExtra("image2", uriPlayer2.toString());
+            savePlayerInMap(name2, uriPlayer2.toString());
         }
         //game.putExtra(name1, player1Name.getText());
         //game.putExtra(name2, player2Name.getText());
-      //  playerList.
-                startActivity(game);
+        //  playerList.
+        startActivity(game);
     }
 
     @Override
@@ -202,24 +210,24 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 Bitmap circularBitmap = getCircularBitmap(croppedBitmap);
-try {
-    if (picToPlayer == 1) {
-        //uriPlayer1 = resultUri;
-        imageView1.setImageBitmap(circularBitmap);
-        saveImage(circularBitmap, 1);
-        //bitmapCreator(bitmap, filename1);
-        //imageView1.setImageDrawable(drawable);
-    } else if (picToPlayer == 2) {
-        //uriPlayer2 = resultUri;
-        imageView2.setImageBitmap(circularBitmap);
-        saveImage(circularBitmap, 2);
-        //bitmapCreator(bitmap, filename2);
-        // imageView2.setImageDrawable(drawable);
-    }
-} catch (Exception e) {
-    e.printStackTrace();
-    Log.i("Error saving Image", "Error in onActivityResult");
-}
+                try {
+                    if (picToPlayer == 1) {
+                        //uriPlayer1 = resultUri;
+                        imageView1.setImageBitmap(circularBitmap);
+                        saveImage(circularBitmap, 1);
+                        //bitmapCreator(bitmap, filename1);
+                        //imageView1.setImageDrawable(drawable);
+                    } else if (picToPlayer == 2) {
+                        //uriPlayer2 = resultUri;
+                        imageView2.setImageBitmap(circularBitmap);
+                        saveImage(circularBitmap, 2);
+                        //bitmapCreator(bitmap, filename2);
+                        // imageView2.setImageDrawable(drawable);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Log.i("Error saving Image", "Error in onActivityResult");
+                }
 
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Exception error = result.getError();
@@ -248,7 +256,7 @@ try {
         return FileName;
     }
 
-    public void saveImage(Bitmap imageFile, int playerNumber)  {
+    public void saveImage(Bitmap imageFile, int playerNumber) {
         //if (imageName == null) {
         //    imageName = createImageName();
         //}
@@ -293,6 +301,7 @@ try {
             e.printStackTrace();
         }
     }
+
     public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
         int width = bm.getWidth();
         int height = bm.getHeight();
@@ -309,6 +318,7 @@ try {
         bm.recycle();
         return resizedBitmap;
     }
+
     private void scanFile(String path) {
         MediaScannerConnection.scanFile(MainActivity.this,
                 new String[]{path}, null,
@@ -371,7 +381,8 @@ try {
 
 */
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == CAPTURE_IMAGE_REQUEST || requestCode == SAVING_IMAGE_REQUEST) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
