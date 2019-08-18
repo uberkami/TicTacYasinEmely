@@ -62,10 +62,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:text="Player 2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Player1Text" />
+        app:layout_constraintTop_toBottomOf="@+id/choosePlayer1" />
 
     <Button
         android:id="@+id/startButton"
@@ -129,17 +129,33 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:onClick="choosePlayer"
         android:tag="1"
         android:text="choose Player 1"
-        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cameraButton2" />
+        app:layout_constraintTop_toBottomOf="@+id/Player1Text" />
+
+    <Button
+        android:id="@+id/choosePlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="choosePlayer"
+        android:tag="2"
+        android:text="choose Player 2"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Player2Text" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

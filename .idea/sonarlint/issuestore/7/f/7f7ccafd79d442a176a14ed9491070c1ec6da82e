@@ -1,5 +1,11 @@
 
-|squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(óİÉĞûÿÿÿÿ8‘˜±²É-
-jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ğ˜ÉÛüÿÿÿÿ
-Fsquid:S11482"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ö‘ª±É-
-wsquid:S2293#"YReplace the type specification in this constructor call with the diamond operator ("<>").(ŠÛÉ›8ö‘ª±É-
+nsquid:CommentedOutCodeLineU"<This block of commented-out lines of code should be removed.(®–Àåÿÿÿÿÿ8Ô°‚¸Ê-
+|squid:S2293i"YReplace the type specification in this constructor call with the diamond operator ("<>").(ßïë¹øÿÿÿÿ8Û×ª·Ê-
+jsquid:S1192s"GDefine a constant instead of duplicating this literal "My_map" 3 times.(ÇÅøúÿÿÿÿ8Û×ª·Ê-
+|squid:S2293$"YReplace the type specification in this constructor call with the diamond operator ("<>").(óİÉĞûÿÿÿÿ8‘˜±²É-
+Rsquid:EmptyStatementUsageCheck>"Remove this empty statement.(Åñ­õşÿÿÿÿ8Å¸ı·Ê-
+wsquid:S2293z"YReplace the type specification in this constructor call with the diamond operator ("<>").(íÀä¸8§‘¸Ê-
+Gsquid:S1148‰"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Û×ª·Ê-
+Psquid:S1135W"2Complete the task associated to this TODO comment.(Ùš8Ô°‚¸Ê-
+Rsquid:EmptyStatementUsageCheck:"Remove this empty statement.(Åñ­õşÿÿÿÿ8‰¸æ·Ê-
+jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ğ˜ÉÛüÿÿÿÿ

@@ -12,10 +12,12 @@ public class Player {
     }
 
     public String getName() {
+
         return name;
     }
 
     public Uri getUri() {
+
         return uri;
     }
 

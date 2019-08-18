@@ -88,6 +88,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Laden der HashMap
+        fillPlayerList();
+
+
+    }
+
+    private void fillPlayerList() {
+        Button choose1View = findViewById(R.id.choosePlayer1);
+        Button choose2View = findViewById(R.id.choosePlayer2);
         try {
             playerList = loadSavedPlayerList();
         } catch (Exception e) {
@@ -95,14 +103,33 @@ public class MainActivity extends AppCompatActivity {
             playerList = new HashMap<String, String>();
         }
 
+        if (playerList.size() >= 1) {
+            choose1View.setVisibility(View.VISIBLE);
+            choose2View.setVisibility(View.VISIBLE);
+        } else if (playerList.size() == 0) {
+            choose1View.setVisibility(View.INVISIBLE);
+            choose2View.setVisibility(View.INVISIBLE);
+        }
 
+    }
+
+    @Override
+    protected void onResume() {
+        Log.i("onResume", "Returned to MainActicity");
+        fillPlayerList();
+        super.onResume();
     }
 
     public void choosePlayer(View view) {
         int selectedPlayer = Integer.parseInt(view.getTag().toString());
         Log.i("tag of view", "" + selectedPlayer);
         Intent choosePlayerIntent = new Intent(this, choosePlayer.class);
-        startActivityForResult(choosePlayerIntent, 5);
+        if (selectedPlayer == 1) {
+            startActivityForResult(choosePlayerIntent, 5);
+        }
+        if (selectedPlayer == 2) {
+            startActivityForResult(choosePlayerIntent, 6);
+        }
     }
 
     @Override
@@ -153,16 +180,17 @@ public class MainActivity extends AppCompatActivity {
         if (playerList == null) {
             playerList = new HashMap<String, String>();
         }
-        if (name != null && uri != null) {
+        if (name.length() > 0 && uri != null) {
             Log.i("name zu speichern", name);
             playerList.put(name, uri);
         }
+        saveMap(playerList);
     }
 
     public void startGame(View view) {
         final Intent game = new Intent(this, GameActivity.class);
-        name1 = player1Name.getText().toString();
-        name2 = player2Name.getText().toString();
+        name1 = player1Name.getText().toString().trim();
+        name2 = player2Name.getText().toString().trim();
 
         Bundle bundle = new Bundle();
         bundle.putString("name1", name1);
@@ -197,6 +225,22 @@ public class MainActivity extends AppCompatActivity {
         //Bitmap bitmap = null;
         Bitmap croppedBitmap = null;
         Uri resultUri = null;
+        if (requestCode == 5 && resultCode == RESULT_OK) {
+            name1 = data.getStringExtra("playerName");
+            player1Name.setText(name1);
+            Log.i("name of Intent", name1);
+            uriPlayer1 = Uri.parse(data.getStringExtra("playerUri"));
+            imageView1.setImageURI(uriPlayer1);
+            Log.i("Uri of Intent", uriPlayer1.toString());
+        }
+        if (requestCode == 6 && resultCode == RESULT_OK) {
+            name2 = data.getStringExtra("playerName");
+            player2Name.setText(name2);
+            Log.i("name of Intent", name2);
+            uriPlayer2 = Uri.parse(data.getStringExtra("playerUri"));
+            imageView2.setImageURI(uriPlayer2);
+            Log.i("Uri of Intent", uriPlayer2.toString());
+        }
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK && data != null) {
