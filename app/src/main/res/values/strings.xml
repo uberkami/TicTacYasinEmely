@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">TicTacYasinEmely</string>
+    <string name="app_name">Face Tic Tac Toe</string>
     <string name="title_activity_start">StartActivity</string>
 </resources>

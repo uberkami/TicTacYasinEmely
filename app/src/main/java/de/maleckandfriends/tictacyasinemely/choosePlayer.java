@@ -63,7 +63,9 @@ public class choosePlayer extends AppCompatActivity {
 
                         return false;
                     }
+
                 });
+popupMenu.show();
                 return true;
             }
         });
@@ -96,16 +98,15 @@ public class choosePlayer extends AppCompatActivity {
         playerArrayList.remove(i);
         adapter.notifyDataSetChanged();
         saveMap(outputMap);
-
     }
-
+/*
     public void deleteList(View view) {
         playerArrayList.clear();
         adapter.notifyDataSetChanged();
         Map<String, String> newMap = new HashMap<String, String>();
         saveMap(newMap);
     }
-
+*/
     private void saveMap(Map<String, String> inputMap) {
         SharedPreferences pSharedPref = getApplicationContext().getSharedPreferences("savedPlayerList", Context.MODE_PRIVATE);
         if (pSharedPref != null) {

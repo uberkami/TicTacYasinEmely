@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bokeh"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/cameraButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="takePhoto"
+        android:tag="1"
+        app:layout_constraintBottom_toBottomOf="@+id/Player1Text"
+        app:layout_constraintStart_toEndOf="@+id/Player1Text"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <EditText
+        android:id="@+id/Player1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Name Player 1"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1TextView" />
+
+    <EditText
+        android:id="@+id/Player2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Name Player 2"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Player2TextView2" />
+
+    <TextView
+        android:id="@+id/player1TextView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Player 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Player2TextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Player 2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choosePlayer1" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="startGame"
+        android:text="Start Game!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imagePlayer2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imagePlayer1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/cameraButton1"
+        app:layout_constraintStart_toEndOf="@+id/cameraButton1"
+        tools:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ImageButton
+        android:id="@+id/imagePlayer2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/cameraButton2"
+        app:layout_constraintStart_toEndOf="@+id/cameraButton2"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/cameraButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="takePhoto"
+        android:tag="2"
+        app:layout_constraintBottom_toBottomOf="@+id/Player2Text"
+        app:layout_constraintStart_toEndOf="@+id/Player2Text"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <Button
+        android:id="@+id/choosePlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:onClick="choosePlayer"
+        android:tag="1"
+        android:text="choose Player 1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Player1Text" />
+
+    <Button
+        android:id="@+id/choosePlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="choosePlayer"
+        android:tag="2"
+        android:text="choose Player 2"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Player2Text" />
+
+<!--    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:adsize="Banner"
+        android:adUnit="ca-app-pub-1639386527074561~3666616458"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1639386527074561/8272484990"
+        ads:layout_constraintBottom_toTopOf="@+id/startButton"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent">
+    </com.google.android.gms.ads.AdView>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
+

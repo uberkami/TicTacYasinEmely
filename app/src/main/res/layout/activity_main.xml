@@ -157,10 +157,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Player2Text" />
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--    <com.google.android.gms.ads.AdView
+<!--    <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
         android:adsize="Banner"
@@ -179,4 +176,6 @@
         ads:layout_constraintBottom_toTopOf="@+id/startButton"
         ads:layout_constraintEnd_toEndOf="parent"
         ads:layout_constraintStart_toStartOf="parent">
-        </com.google.android.gms.ads.AdView>-->
+    </com.google.android.gms.ads.AdView>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
+
